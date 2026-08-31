@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حيدر حسن | Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0710;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #9333ea;
+            padding: 3px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+            background-color: #120d1c;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .title {
+            color: #a855f7;
+            font-size: 15px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .bio {
+            background-color: #120d1c;
+            border: 1px solid #2d223f;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d1d5db;
+            margin-bottom: 25px;
+            text-align: right;
+        }
+        .section-title {
+            color: #a855f7;
+            font-size: 22px;
+            margin: 30px 0 15px 0;
+            font-weight: bold;
+            text-align: right;
+        }
+        .card {
+            background-color: #120d1c;
+            border: 1px solid #2d223f;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        .card h3 {
+            font-size: 18px;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .card p {
+            font-size: 13px;
+            color: #9ca3af;
+            line-height: 1.5;
+        }
+        .badge {
+            display: inline-block;
+            background-color: rgba(147, 51, 234, 0.2);
+            color: #c084fc;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            margin-bottom: 8px;
+            border: 1px solid #9333ea;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .skill-tag {
+            background-color: #9333ea;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .location {
+            color: #c084fc;
+            font-size: 15px;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- صورتك الشخصية -->
+        <img src="IMG_8762.jpeg" alt="حيدر حسن" class="profile-img">
+        
+        <h1>حيدر حسن</h1>
+        <div class="title">طالب هندسة تقنيات الفضاء والطائرات المسيرة<br>الجامعة التقنية الوسطى</div>
+
+        <!-- نبذة تعريفية -->
+        <div class="bio">
+            مهتم بعلوم الفضاء، الاستشعار عن بعد، وتكنولوجيا الطائرات المسيرة (UAV). أسعى لدمج البرمجة وأنظمة التحكم الآلي لتطوير حلول هندسية متقدمة.
+        </div>
+
+        <!-- الشهادات والتدريب -->
+        <div class="section-title">الشهادات والتدريب</div>
+        
+        <div class="card">
+            <span class="badge">NASA ARSET</span>
+            <h3>شهادة الاستشعار عن بعد عبر الأقمار الصناعية</h3>
+            <p>إتمام التدريب المتخصص في معالجة وتحليل بيانات الأقمار الصناعية للاستشعار عن بعد.</p>
+        </div>
+
+        <div class="card">
+            <span class="badge">Alison Certification</span>
+            <h3>مقدمة في الطائرات المسيرة (Introduction to Drones)</h3>
+            <p>إتمام دورة أساسيات الطائرات المسيرة واجتياز التقييم النهائي بكفاءة عالية.</p>
+        </div>
+
+        <!-- المشاريع والاهتمامات -->
+        <div class="section-title">المشاريع والاهتمامات</div>
+        
+        <div class="card">
+            <h3>مشروع نموذج طائرة B-2 المسيرة</h3>
+            <p>تخطيط وتصنيع نموذج طائرة مجنحة من الستايبروف مع دراسة متطلبات المحركات وأنظمة التحكم.</p>
+        </div>
+
+        <div class="card">
+            <h3>أنظمة التحكم والحساسات (Arduino & Microcontrollers)</h3>
+            <p>تنفيذ دوائر إلكترونية وتطبيقات عملية باستخدام حساسات الحركة (MPU6050) والمتحكمات الدقيقة.</p>
+        </div>
+
+        <!-- المهارات -->
+        <div class="section-title">المهارات التقنية</div>
+        
+        <div class="card">
+            <div class="skills-container">
+                <span class="skill-tag">UAV Technology</span>
+                <span class="skill-tag">Satellite Remote Sensing</span>
+                <span class="skill-tag">Embedded Systems</span>
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">Python & C++</span>
+            </div>
+        </div>
+
+        <div class="location">بغداد، العراق 🇮🇶</div>
+    </div>
+
+</body>
+</html>
