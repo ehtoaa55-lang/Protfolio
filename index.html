@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>حيدر حسن عواد | Portfolio</title>
-    <!-- استيراد خط الفراغ والأيقونات الاحترافية -->
+    <!-- استيراد الخطوط والأيقونات الاحترافية -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -30,7 +30,7 @@
         }
         /* قسم الصورة الشخصية والمعلومات */
         .profile-section {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
         .profile-img {
             width: 120px;
@@ -47,17 +47,30 @@
             margin-bottom: 5px;
             color: #fff;
         }
-        p.bio {
+        p.major {
             font-size: 14px;
+            color: #b19cd9;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        /* نبذة تعريفيّة */
+        .bio-box {
+            background-color: #16161f;
+            border: 1px solid #2a2a3b;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 13px;
             color: #b0b0b5;
+            line-height: 1.6;
             margin-bottom: 25px;
+            text-align: center;
         }
         /* العناوين والأقسام */
         .section-title {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 700;
             color: #b19cd9;
-            margin: 30px 0 15px 0;
+            margin: 25px 0 15px 0;
             position: relative;
             display: inline-block;
         }
@@ -70,7 +83,7 @@
             bottom: -5px;
             right: 25%;
         }
-        /* بطاقات الشهادات والأزرار */
+        /* بطاقات الشهادات */
         .card-list {
             display: flex;
             flex-direction: column;
@@ -81,13 +94,14 @@
             border: 1px solid #2a2a3b;
             border-radius: 12px;
             padding: 15px 20px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 600;
             color: #eaeaf0;
             display: flex;
             align-items: center;
             justify-content: space-between;
             transition: all 0.3s ease;
+            text-align: right;
             box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
         .card-item:hover {
@@ -98,10 +112,11 @@
         .card-item i {
             color: #f39c12;
             font-size: 18px;
+            margin-left: 10px;
         }
         /* قسم التواصل الاجتماعي */
         .social-section {
-            margin-top: 40px;
+            margin-top: 35px;
         }
         .social-icons {
             display: flex;
@@ -130,7 +145,7 @@
         }
         /* الحقوق */
         .footer {
-            margin-top: 30px;
+            margin-top: 25px;
             font-size: 12px;
             color: #666;
         }
@@ -139,11 +154,16 @@
 <body>
 
     <div class="container">
-        <!-- الصورة الشخصية والمعلومات -->
+        <!-- الصورة الشخصية والمعلومات الأساسية -->
         <div class="profile-section">
             <img src="IMG_8762.jpeg" alt="حيدر حسن" class="profile-img">
             <h1>حيدر حسن عواد</h1>
-            <p class="bio">مهندس تقنيات الفضاء والطائرات المسيرة | الجامعة التقنية الوسطى</p>
+            <p class="major">مهندس تقنيات الفضاء والطائرات المسيرة | الجامعة التقنية الوسطى</p>
+            
+            <!-- نبذة عني -->
+            <div class="bio-box">
+                مهتم بتطوير أنظمة الطائرات بدون طيار (الدرونز)، تقنيات الفضاء، والاستشعار عن بعد وتحليل بيانات الأقمار الصناعية. أسعى دائماً لتطوير مهاراتي التقنية والهندسية والمشاركة في المؤتمرات التخصصية.
+            </div>
         </div>
 
         <!-- قسم الإنجازات والشهادات -->
