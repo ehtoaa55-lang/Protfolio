@@ -3,24 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حيدر حسن عواد | Portfolio</title>
-    <!-- استيراد الخطوط والأيقونات الاحترافية -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>حيدر حسن | Portfolio</title>
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Cairo', sans-serif;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         body {
-            background-color: #0b0b0f;
+            background-color: #0b0710;
             color: #ffffff;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            min-height: 100vh;
             padding: 20px;
         }
         .container {
@@ -28,188 +24,151 @@
             max-width: 450px;
             text-align: center;
         }
-        /* قسم الصورة الشخصية والمعلومات */
-        .profile-section {
-            margin-bottom: 25px;
-        }
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             border-radius: 50%;
+            border: 3px solid #9333ea;
+            padding: 3px;
             object-fit: cover;
-            border: 3px solid #8a2be2;
-            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
             margin-bottom: 15px;
+            box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
+            background-color: #120d1c;
         }
         h1 {
-            font-size: 24px;
-            font-weight: 700;
+            font-size: 28px;
+            font-weight: bold;
             margin-bottom: 5px;
-            color: #fff;
         }
-        p.major {
+        .title {
+            color: #a855f7;
+            font-size: 15px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .bio {
+            background-color: #120d1c;
+            border: 1px solid #2d223f;
+            padding: 20px;
+            border-radius: 15px;
             font-size: 14px;
-            color: #b19cd9;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        /* نبذة تعريفيّة */
-        .bio-box {
-            background-color: #16161f;
-            border: 1px solid #2a2a3b;
-            border-radius: 12px;
-            padding: 15px;
-            font-size: 13px;
-            color: #b0b0b5;
             line-height: 1.6;
+            color: #d1d5db;
             margin-bottom: 25px;
-            text-align: center;
-        }
-        /* العناوين والأقسام */
-        .section-title {
-            font-size: 18px;
-            font-weight: 700;
-            color: #b19cd9;
-            margin: 25px 0 15px 0;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 2px;
-            background-color: #8a2be2;
-            bottom: -5px;
-            right: 25%;
-        }
-        /* بطاقات الشهادات */
-        .card-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .card-item {
-            background-color: #16161f;
-            border: 1px solid #2a2a3b;
-            border-radius: 12px;
-            padding: 15px 20px;
-            font-size: 14px;
-            font-weight: 600;
-            color: #eaeaf0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.3s ease;
             text-align: right;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
         }
-        .card-item:hover {
-            border-color: #8a2be2;
-            transform: translateY(-2px);
-            background-color: #1f1f2e;
+        .section-title {
+            color: #a855f7;
+            font-size: 22px;
+            margin: 30px 0 15px 0;
+            font-weight: bold;
+            text-align: right;
         }
-        .card-item i {
-            color: #f39c12;
+        .card {
+            background-color: #120d1c;
+            border: 1px solid #2d223f;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            text-align: right;
+        }
+        .card h3 {
             font-size: 18px;
-            margin-left: 10px;
+            color: #ffffff;
+            margin-bottom: 8px;
         }
-        /* قسم التواصل الاجتماعي */
-        .social-section {
-            margin-top: 35px;
+        .card p {
+            font-size: 13px;
+            color: #9ca3af;
+            line-height: 1.5;
         }
-        .social-icons {
+        .badge {
+            display: inline-block;
+            background-color: rgba(147, 51, 234, 0.2);
+            color: #c084fc;
+            padding: 4px 10px;
+            border-radius: 8px;
+            font-size: 11px;
+            margin-bottom: 8px;
+            border: 1px solid #9333ea;
+        }
+        .skills-container {
             display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
         }
-        .social-btn {
-            width: 45px;
-            height: 45px;
-            background-color: #16161f;
-            border: 1px solid #2a2a3b;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .skill-tag {
+            background-color: #9333ea;
             color: #fff;
-            font-size: 20px;
-            transition: all 0.3s ease;
-            text-decoration: none;
-        }
-        .social-btn:hover {
-            background-color: #8a2be2;
-            border-color: #8a2be2;
-            transform: scale(1.1);
-        }
-        /* الحقوق */
-        .footer {
-            margin-top: 25px;
+            padding: 6px 14px;
+            border-radius: 20px;
             font-size: 12px;
-            color: #666;
+        }
+        .location {
+            color: #c084fc;
+            font-size: 15px;
+            margin-top: 25px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- الصورة الشخصية والمعلومات الأساسية -->
-        <div class="profile-section">
-            <img src="IMG_8762.jpeg" alt="حيدر حسن" class="profile-img">
-            <h1>حيدر حسن عواد</h1>
-            <p class="major">مهندس تقنيات الفضاء والطائرات المسيرة | الجامعة التقنية الوسطى</p>
-            
-            <!-- نبذة عني -->
-            <div class="bio-box">
-                مهتم بتطوير أنظمة الطائرات بدون طيار (الدرونز)، تقنيات الفضاء، والاستشعار عن بعد وتحليل بيانات الأقمار الصناعية. أسعى دائماً لتطوير مهاراتي التقنية والهندسية والمشاركة في المؤتمرات التخصصية.
+        <!-- صورتك الشخصية -->
+        <img src="IMG_8762.jpeg" alt="حيدر حسن" class="profile-img">
+        
+        <h1>حيدر حسن</h1>
+        <div class="title">طالب هندسة تقنيات الفضاء والطائرات المسيرة<br>الجامعة التقنية الوسطى</div>
+
+        <!-- نبذة تعريفية -->
+        <div class="bio">
+            مهتم بعلوم الفضاء، الاستشعار عن بعد، وتكنولوجيا الطائرات المسيرة (UAV). أسعى لدمج البرمجة وأنظمة التحكم الآلي لتطوير حلول هندسية متقدمة.
+        </div>
+
+        <!-- المشاريع والاهتمامات -->
+        <div class="section-title">المشاريع والاهتمامات</div>
+        
+        <div class="card">
+            <h3>مشروع نموذج طائرة B-2 المسيرة</h3>
+            <p>تخطيط وتصنيع نموذج طائرة مجنحة من الستايبروف مع دراسة متطلبات المحركات وأنظمة التحكم.</p>
+        </div>
+
+        <div class="card">
+            <h3>أنظمة التحكم والحساسات (Arduino & Microcontrollers)</h3>
+            <p>تنفيذ دوائر إلكترونية وتطبيقات عملية باستخدام حساسات الحركة (MPU6050) والمتحكمات الدقيقة.</p>
+        </div>
+
+        <!-- المهارات -->
+        <div class="section-title">المهارات التقنية</div>
+        
+        <div class="card">
+            <div class="skills-container">
+                <span class="skill-tag">UAV Technology</span>
+                <span class="skill-tag">Satellite Remote Sensing</span>
+                <span class="skill-tag">Embedded Systems</span>
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">Python & C++</span>
             </div>
         </div>
 
-        <!-- قسم الإنجازات والشهادات -->
-        <div class="section-title">الإنجازات والشهادات</div>
-        <div class="card-list">
-            <div class="card-item">
-                <span>برنامج ناسا للاستشعار عن بعد: بيانات الطيف الفائق لأنظمة الأراضي والواجهات البحرية</span>
-                <i class="fas fa-award"></i>
-            </div>
-            <div class="card-item">
-                <span>برنامج ناسا للاستشعار عن بعد: أساسيات الاستشعار عن بعد</span>
-                <i class="fas fa-award"></i>
-            </div>
-            <div class="card-item">
-                <span>جامعة إمبري ريدل للطيران: دورة تدريب الطيار عن بعد (ERAU Remote Pilot 101)</span>
-                <i class="fas fa-award"></i>
-            </div>
-            <div class="card-item">
-                <span>شهادة حضور المؤتمر الدولي الخامس للتقنيات الجيومكانية والمدن الذكية</span>
-                <i class="fas fa-award"></i>
-            </div>
+        <!-- الشهادات والتدريب (أصبحت بالأسفل) -->
+        <div class="section-title">الشهادات والتدريب</div>
+        
+        <div class="card">
+            <span class="badge">NASA ARSET</span>
+            <h3>شهادة الاستشعار عن بعد عبر الأقمار الصناعية</h3>
+            <p>إتمام التدريب المتخصص في معالجة وتحليل بيانات الأقمار الصناعية للاستشعار عن بعد.</p>
         </div>
 
-        <!-- قسم التواصل معي -->
-        <div class="social-section">
-            <div class="section-title">تواصل معي</div>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/haidar-hassan-9a82a242a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="social-btn" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/ehtoaa55-lang" target="_blank" class="social-btn" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/47_0s?igsi=ZGEwYXB2a243MjB2&utm_source=qr" target="_blank" class="social-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://t.me/HR_7CR" target="_blank" class="social-btn" title="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-            </div>
+        <div class="card">
+            <span class="badge">Alison Certification</span>
+            <h3>مقدمة في الطائرات المسيرة (Introduction to Drones)</h3>
+            <p>إتمام دورة أساسيات الطائرات المسيرة واجتياز التقييم النهائي بكفاءة عالية.</p>
         </div>
 
-        <!-- الحقوق -->
-        <div class="footer">
-            <p>© 2026 Haidar Hassan. All Rights Reserved.</p>
-        </div>
+        <div class="location">بغداد، العراق 🇮🇶</div>
     </div>
 
 </body>
