@@ -1,252 +1,392 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haidar Hassan | Portfolio</title>
-    <!-- استيراد الأيقونات الاحترافية للتواصل -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #0b0710;
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .container {
-            width: 100%;
-            max-width: 450px;
-            text-align: center;
-        }
-        .profile-img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            border: 3px solid #9333ea;
-            padding: 3px;
-            object-fit: cover;
-            margin-bottom: 15px;
-            box-shadow: 0 0 20px rgba(147, 51, 234, 0.5);
-            background-color: #120d1c;
-        }
-        h1 {
-            font-size: 26px;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .title {
-            color: #a855f7;
-            font-size: 14px;
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-        .bio {
-            background-color: #120d1c;
-            border: 1px solid #2d223f;
-            padding: 18px;
-            border-radius: 15px;
-            font-size: 13px;
-            line-height: 1.6;
-            color: #d1d5db;
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .section-title {
-            color: #a855f7;
-            font-size: 18px;
-            margin: 25px 0 12px 0;
-            font-weight: bold;
-            text-align: left;
-        }
-        .card {
-            background-color: #120d1c;
-            border: 1px solid #2d223f;
-            border-radius: 15px;
-            padding: 18px;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        .card h3 {
-            font-size: 16px;
-            color: #ffffff;
-            margin-bottom: 6px;
-        }
-        .card p {
-            font-size: 12px;
-            color: #9ca3af;
-            line-height: 1.5;
-        }
-        /* بوكس الشهادات الموحد */
-        .certs-box {
-            background-color: #120d1c;
-            border: 1px solid #2d223f;
-            border-radius: 15px;
-            padding: 18px;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-        .cert-item {
-            margin-bottom: 15px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #1f172e;
-        }
-        .cert-item:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
-        }
-        .cert-title {
-            font-size: 14px;
-            font-weight: bold;
-            color: #ffffff;
-            margin-bottom: 3px;
-        }
-        .cert-org {
-            font-size: 11px;
-            color: #c084fc;
-            margin-bottom: 4px;
-        }
-        .cert-desc {
-            font-size: 12px;
-            color: #9ca3af;
-        }
-        .skills-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 5px;
-        }
-        .skill-tag {
-            background-color: #1f172e;
-            color: #c084fc;
-            border: 1px solid #9333ea;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 600;
-        }
-        /* قسم التواصل بالأسفل */
-        .social-section {
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 12px;
-        }
-        .social-btn {
-            width: 42px;
-            height: 42px;
-            background-color: #120d1c;
-            border: 1px solid #2d223f;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #c084fc;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        .social-btn:hover {
-            background-color: #9333ea;
-            color: #fff;
-            border-color: #9333ea;
-            transform: scale(1.1);
-        }
-        .location {
-            color: #9ca3af;
-            font-size: 13px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haydar Hassan Awaad | Space & UAV Engineering</title>
+  <style>
+    :root {
+      --blue-deep: #071e46;
+      --blue-main: #0c3b82;
+      --blue-bright: #1656b8;
+      --blue-soft: #eaf2fc;
+      --white: #ffffff;
+      --gold: #d4af37;
+      --gold-light: #f3dc8d;
+      --text-dark: #0b1f3a;
+      --text-muted: #4a607a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg, var(--blue-deep) 0%, var(--blue-main) 42%, var(--blue-soft) 42.1%, var(--white) 100%);
+      color: var(--text-dark);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+    }
+
+    /* Header / Hero */
+    .hero {
+      background: linear-gradient(135deg, #061838 0%, #0d4394 100%);
+      color: var(--white);
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      padding: 36px 30px;
+      box-shadow: 0 14px 35px rgba(4, 18, 46, 0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .gold-badge {
+      background: rgba(212, 175, 55, 0.16);
+      color: var(--gold-light);
+      border: 1px solid var(--gold);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      color: var(--white);
+      margin-bottom: 8px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero .subtitle {
+      color: #cfe2ff;
+      font-size: 1.08rem;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .hero .bio {
+      color: #eef5ff;
+      max-width: 780px;
+      font-size: 0.98rem;
+      border-left: 3px solid var(--gold);
+      padding-left: 14px;
+    }
+
+    /* Interactive Navigation Tabs */
+    .nav-tabs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 26px 0;
+    }
+
+    .tab-btn {
+      background: var(--blue-main);
+      color: var(--white);
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      padding: 18px 22px;
+      font-size: 1.12rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      box-shadow: 0 8px 20px rgba(12, 59, 130, 0.18);
+    }
+
+    .tab-btn:hover {
+      background: var(--blue-bright);
+      transform: translateY(-2px);
+    }
+
+    .tab-btn.active {
+      background: var(--white);
+      color: var(--blue-deep);
+      border-color: var(--gold);
+      box-shadow: 0 10px 24px rgba(12, 59, 130, 0.22);
+    }
+
+    .tab-btn span.gold-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }
+
+    /* Panels */
+    .panel {
+      display: none;
+      background: var(--white);
+      border: 1.5px solid #c9dcf5;
+      border-top: 4px solid var(--gold);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 10px 28px rgba(12, 59, 130, 0.08);
+    }
+
+    .panel.active {
+      display: block;
+      animation: fadeIn 0.25s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-title {
+      color: var(--blue-main);
+      font-size: 1.45rem;
+      margin-bottom: 18px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: var(--blue-soft);
+      border: 1px solid #b8d1f2;
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+      padding: 20px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(12, 59, 130, 0.12);
+    }
+
+    .card h3 {
+      color: var(--blue-deep);
+      font-size: 1.12rem;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      margin-bottom: 12px;
+    }
+
+    .sim-link {
+      display: inline-block;
+      background: var(--blue-main);
+      color: var(--white);
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: 1px solid var(--gold);
+      transition: background 0.2s ease;
+    }
+
+    .sim-link:hover {
+      background: var(--blue-deep);
+      color: var(--gold-light);
+    }
+
+    .cert-list {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .cert-item {
+      background: var(--blue-soft);
+      border: 1px solid #b8d1f2;
+      border-left: 4px solid var(--gold);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: var(--blue-deep);
+      font-weight: 500;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 26px;
+      background: var(--blue-deep);
+      color: var(--white);
+      border: 1.5px solid var(--gold);
+      border-radius: 16px;
+      padding: 20px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.92rem;
+    }
+
+    .footer a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 650px) {
+      .nav-tabs {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 1.7rem;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
+    <!-- Header -->
+    <header class="hero">
+      <div class="badge-row">
+        <span class="gold-badge">Graduate of Aspire Institute</span>
+        <span class="gold-badge">Team Leader — FAP Team (Captain Farid Foundation for Space & Aviation)</span>
+      </div>
+      <h1>Haydar Hassan Awaad</h1>
+      <div class="subtitle">Space Engineering &amp; Unmanned Aerial Vehicles (UAV) Technology</div>
+      <p class="bio">
+        Undergraduate engineering student (3rd Stage) at the Electrical Engineering Technical College, Middle Technical University (Baghdad, Iraq). Graduate of Aspire Institute and Team Leader of Team FAP under Captain Farid Foundation for Space &amp; Aviation, building CubeSat concepts, orbital simulations, UAV CAD models, and embedded hardware prototypes.
+      </p>
+    </header>
 
-    <div class="container">
-        <!-- الصورة الشخصية المحدثة بالاسم الصحيح -->
-        <img src="IMG_4467.jpeg" alt="Haidar Hassan" class="profile-img">
-        
-        <h1>Haidar Hassan</h1>
-        <div class="title">Space Engineering & UAV Technology Student 🛸<br>Middle Technical University</div>
-
-        <!-- النبذة التعريفية -->
-        <div class="bio">
-            Passionate and driven engineering student specialized in Aerospace and Unmanned Aerial Vehicles (UAVs) ✈️. Highly enthusiastic about satellite remote sensing 🛰️, hyperspectral data analysis, embedded systems ⚡, and autonomous flight control technologies. Dedicated to bridging theoretical knowledge with practical hardware implementation.
-        </div>
-
-        <!-- المهارات واللغات البرمجية معاً -->
-        <div class="section-title">Technical Skills & Programming Languages 💻</div>
-        <div class="card">
-            <div class="skills-container">
-                <span class="skill-tag">🛸 UAV Technology</span>
-                <span class="skill-tag">🛰️ Satellite Remote Sensing</span>
-                <span class="skill-tag">⚡ Embedded Systems</span>
-                <span class="skill-tag">🤖 Arduino & Microcontrollers</span>
-                <span class="skill-tag">🐍 Python</span>
-                <span class="skill-tag">⚡ C++</span>
-            </div>
-        </div>
-
-        <!-- المشاريع والاهتمامات -->
-        <div class="section-title">Projects & Expertise 🚀</div>
-        
-        <div class="card">
-            <h3>B-2 Flying Wing UAV Design 🛸</h3>
-            <p>Planned and structured a custom Styrofoam flying wing drone, focusing on aerodynamic layouts, motor scaling, and electronic speed controller requirements.</p>
-        </div>
-
-        <div class="card">
-            <h3>Sensor Integration & Hardware 🤖</h3>
-            <p>Built robust circuitry and firmware using MPU6050 motion sensors, operational amplifiers, and microcontroller interfaces.</p>
-        </div>
-
-        <!-- الشهادات والتدريب (في بوكس واحد) -->
-        <div class="section-title">Certifications & Training 🏆</div>
-        <div class="certs-box">
-            <div class="cert-item">
-                <div class="cert-title">🛰️ Satellite Remote Sensing Certification</div>
-                <div class="cert-org">NASA ARSET</div>
-                <div class="cert-desc">Specialized training in processing and analyzing satellite data for land and coastal applications.</div>
-            </div>
-            <div class="cert-item">
-                <div class="cert-title">✈️ Introduction to Drones</div>
-                <div class="cert-org">Alison Certification</div>
-                <div class="cert-desc">Comprehensive fundamentals of unmanned aerial vehicle operations and safety standards.</div>
-            </div>
-        </div>
-
-        <!-- أزرار التواصل في النهاية -->
-        <div class="social-section">
-            <div class="section-title" style="text-align: center;">Get in Touch 🌐</div>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/haidar-hassan-9a82a242a?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="social-btn" title="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/ehtoaa55-lang" target="_blank" class="social-btn" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/47_0s?igsi=ZGEwYXB2a243MjB2&utm_source=qr" target="_blank" class="social-btn" title="Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://t.me/HR_7CR" target="_blank" class="social-btn" title="Telegram">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-            </div>
-        </div>
-
-        <div class="location">Baghdad, Iraq 🇮🇶</div>
+    <!-- Main Interactive Buttons: Projects & Certificates -->
+    <div class="nav-tabs">
+      <button id="btn-projects" class="tab-btn active" onclick="switchTab('projects')">
+        <span>Projects &amp; Designs</span>
+        <span class="gold-dot"></span>
+      </button>
+      <button id="btn-certificates" class="tab-btn" onclick="switchTab('certificates')">
+        <span>Certificates &amp; Achievements</span>
+        <span class="gold-dot"></span>
+      </button>
     </div>
 
+    <!-- Projects Section -->
+    <section id="panel-projects" class="panel active">
+      <h2 class="section-title">Projects &amp; Designed Models</h2>
+      <div class="cards-grid">
+        <!-- Satellite Simulator Card (Replace # with your simulator link) -->
+        <div class="card">
+          <h3>Satellite Orbital Simulator</h3>
+          <p>
+            Interactive orbital simulation designed to visualize satellite trajectories and mission coverage for monitoring environmental and hazard zones.
+          </p>
+          <a class="sim-link" href="PASTE_SATELLITE_SIMULATOR_LINK_HERE" target="_blank" rel="noopener noreferrer">
+            Open Satellite Simulator
+          </a>
+        </div>
+
+        <!-- CubeSat & FAP Team Card -->
+        <div class="card">
+          <h3>CubeSat Mission &amp; Team FAP</h3>
+          <p>
+            Leading Team FAP under Captain Farid Foundation for Space &amp; Aviation on CubeSat mission architecture, orbital analysis, and project documentation.
+          </p>
+        </div>
+
+        <!-- UAV 3D CAD & Physical Models Card -->
+        <div class="card">
+          <h3>UAV 3D CAD &amp; Aerospace Models</h3>
+          <p>
+            3D CAD modeling of unmanned aerial vehicles in SolidWorks alongside custom physical models including a B-2 flying wing concept and a scaled ISS model.
+          </p>
+        </div>
+
+        <!-- Arduino Radar & Embedded Systems Card -->
+        <div class="card">
+          <h3>Arduino Radar &amp; Sensor Prototype</h3>
+          <p>
+            Automated scanning radar and obstacle-detection prototype combining a stepper motor, ultrasonic sensor, gyroscope, buzzer, and status indicators.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="panel-certificates" class="panel">
+      <h2 class="section-title">Certificates &amp; Key Milestones</h2>
+      <ul class="cert-list">
+        <li class="cert-item">Graduate of Aspire Institute (Aspire Leaders Program)</li>
+        <li class="cert-item">Team Leader of Team FAP — Captain Farid Foundation for Space &amp; Aviation</li>
+        <li class="cert-item">NASA Space Apps Challenge Certificate (Baghdad)</li>
+        <li class="cert-item">NASA ARSET — Satellite Remote Sensing Training Certificate</li>
+        <li class="cert-item">Iraqi Engineers Union — Engineering Certificate</li>
+        <li class="cert-item">Imperial College London — Aviation / Aerospace Certificate</li>
+        <li class="cert-item">Introduction to Drones Certification — Alison (96% Score)</li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>Email: <a href="mailto:ehtoaa55@gmail.com">ehtoaa55@gmail.com</a></div>
+      <div>
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        &nbsp;|&nbsp;
+        <a href="https://github.com/ehtoaa55-lang" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function switchTab(tabName) {
+      const btnProjects = document.getElementById("btn-projects");
+      const btnCertificates = document.getElementById("btn-certificates");
+      const panelProjects = document.getElementById("panel-projects");
+      const panelCertificates = document.getElementById("panel-certificates");
+
+      if (tabName === "projects") {
+        btnProjects.classList.add("active");
+        btnCertificates.classList.remove("active");
+        panelProjects.classList.add("active");
+        panelCertificates.classList.remove("active");
+      } else {
+        btnCertificates.classList.add("active");
+        btnProjects.classList.remove("active");
+        panelCertificates.classList.add("active");
+        panelProjects.classList.remove("active");
+      }
+    }
+  </script>
 </body>
 </html>
