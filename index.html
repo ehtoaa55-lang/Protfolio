@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,17 +24,43 @@
     }
 
     body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      font-family: "Segoe UI", Tahoma, Roboto, Arial, sans-serif;
       background: linear-gradient(180deg, var(--blue-deep) 0%, var(--blue-main) 45%, var(--blue-soft) 45.1%, var(--white) 100%);
       color: var(--text-dark);
-      line-height: 1.65;
+      line-height: 1.7;
       min-height: 100vh;
     }
 
     .container {
       max-width: 1050px;
       margin: 0 auto;
-      padding: 28px 20px 60px;
+      padding: 24px 20px 60px;
+    }
+
+    /* Top Bar with Language Switcher */
+    .top-bar {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 14px;
+    }
+
+    .lang-btn {
+      background: linear-gradient(135deg, #0b3b82, #1558bd);
+      color: var(--white);
+      border: 2px solid var(--gold);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(4, 18, 46, 0.3);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn:hover {
+      background: var(--gold);
+      color: var(--blue-deep);
+      transform: translateY(-1px);
     }
 
     /* Header / Hero */
@@ -119,8 +145,8 @@
       color: #f0f6ff;
       max-width: 720px;
       font-size: 0.98rem;
-      border-left: 3px solid var(--gold);
-      padding-left: 14px;
+      border-inline-start: 3px solid var(--gold);
+      padding-inline-start: 14px;
     }
 
     /* Interactive Navigation Tabs */
@@ -207,7 +233,7 @@
     .card {
       background: var(--blue-soft);
       border: 1px solid #b5d0f2;
-      border-left: 4px solid var(--gold);
+      border-inline-start: 4px solid var(--gold);
       border-radius: 14px;
       padding: 20px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -257,7 +283,7 @@
     .cert-item {
       background: var(--blue-soft);
       border: 1px solid #b5d0f2;
-      border-left: 4px solid var(--gold);
+      border-inline-start: 4px solid var(--gold);
       border-radius: 12px;
       padding: 14px 18px;
       color: var(--blue-deep);
@@ -287,6 +313,7 @@
       font-size: 1rem;
       font-weight: 600;
       color: var(--gold-light);
+      direction: ltr;
     }
 
     .social-apps {
@@ -337,9 +364,9 @@
         padding: 28px 20px;
       }
       .hero .bio {
-        border-left: none;
+        border-inline-start: none;
         border-top: 2px solid var(--gold);
-        padding-left: 0;
+        padding-inline-start: 0;
         padding-top: 12px;
       }
       .badge-row {
@@ -367,17 +394,21 @@
 </head>
 <body>
   <div class="container">
+    <!-- Top Bar: Arabic / English Toggle -->
+    <div class="top-bar">
+      <button id="lang-toggle" class="lang-btn" onclick="toggleLanguage()">العربية</button>
+    </div>
+
     <!-- Header -->
     <header class="hero">
       <div class="hero-content">
         <div class="badge-row">
-          <span class="gold-badge">Graduate of Aspire Institute</span>
-          <span class="gold-badge">Team Leader — FAP Team (Captain Farid Foundation for Space &amp; Aviation)</span>
+          <span id="hero-badge" class="gold-badge">Team Leader — FAP Team (Captain Farid Foundation for Space &amp; Aviation)</span>
         </div>
-        <h1>Haydar Hassan Awaad</h1>
-        <div class="subtitle">Space Engineering &amp; Unmanned Aerial Vehicles (UAV) Technology</div>
-        <p class="bio">
-          Undergraduate engineering student (3rd Stage) at the Electrical Engineering Technical College, Middle Technical University (Baghdad, Iraq). Graduate of Aspire Institute and Team Leader of Team FAP under Captain Farid Foundation for Space &amp; Aviation, building CubeSat concepts, orbital simulations, UAV CAD models, and embedded hardware prototypes.
+        <h1 id="hero-name">Haydar Hassan Awaad</h1>
+        <div id="hero-subtitle" class="subtitle">Space Engineering &amp; Unmanned Aerial Vehicles (UAV) Technology</div>
+        <p id="hero-bio" class="bio">
+          Undergraduate engineering student (3rd Stage) at the Electrical Engineering Technical College, Middle Technical University (Baghdad, Iraq). Team Leader of Team FAP under Captain Farid Foundation for Space &amp; Aviation, building CubeSat concepts, orbital simulations, UAV CAD models, and embedded hardware prototypes.
         </p>
       </div>
       <div class="profile-wrap">
@@ -388,50 +419,50 @@
     <!-- Main Interactive Buttons: Projects & Certificates -->
     <div class="nav-tabs">
       <button id="btn-projects" class="tab-btn active" onclick="switchTab('projects')">
-        <span>Projects &amp; Designs</span>
+        <span id="tab-projects-label">Projects &amp; Designs</span>
         <span class="gold-dot"></span>
       </button>
       <button id="btn-certificates" class="tab-btn" onclick="switchTab('certificates')">
-        <span>Certificates &amp; Achievements</span>
+        <span id="tab-certificates-label">Certificates &amp; Achievements</span>
         <span class="gold-dot"></span>
       </button>
     </div>
 
     <!-- Projects Section -->
     <section id="panel-projects" class="panel active">
-      <h2 class="section-title">Projects &amp; Designed Models</h2>
+      <h2 id="projects-title" class="section-title">Projects &amp; Designed Models</h2>
       <div class="cards-grid">
         <!-- Satellite Simulator Card (Replace PASTE_SATELLITE_SIMULATOR_LINK_HERE with your simulator link) -->
         <div class="card">
-          <h3>Satellite Orbital Simulator</h3>
-          <p>
+          <h3 id="proj1-title">Satellite Orbital Simulator</h3>
+          <p id="proj1-desc">
             Interactive orbital simulation designed to visualize satellite trajectories and mission coverage for monitoring environmental and hazard zones.
           </p>
-          <a class="sim-link" href="PASTE_SATELLITE_SIMULATOR_LINK_HERE" target="_blank" rel="noopener noreferrer">
+          <a id="proj1-link" class="sim-link" href="PASTE_SATELLITE_SIMULATOR_LINK_HERE" target="_blank" rel="noopener noreferrer">
             Open Satellite Simulator
           </a>
         </div>
 
         <!-- CubeSat & FAP Team Card -->
         <div class="card">
-          <h3>CubeSat Mission &amp; Team FAP</h3>
-          <p>
+          <h3 id="proj2-title">CubeSat Mission &amp; Team FAP</h3>
+          <p id="proj2-desc">
             Leading Team FAP under Captain Farid Foundation for Space &amp; Aviation on CubeSat mission architecture, orbital analysis, and project documentation.
           </p>
         </div>
 
         <!-- UAV 3D CAD & Physical Models Card -->
         <div class="card">
-          <h3>UAV 3D CAD &amp; Aerospace Models</h3>
-          <p>
+          <h3 id="proj3-title">UAV 3D CAD &amp; Aerospace Models</h3>
+          <p id="proj3-desc">
             3D CAD modeling of unmanned aerial vehicles in SolidWorks alongside custom physical models including a B-2 flying wing concept and a scaled ISS model.
           </p>
         </div>
 
         <!-- Arduino Radar & Embedded Systems Card -->
         <div class="card">
-          <h3>Arduino Radar &amp; Sensor Prototype</h3>
-          <p>
+          <h3 id="proj4-title">Arduino Radar &amp; Sensor Prototype</h3>
+          <p id="proj4-desc">
             Automated scanning radar and obstacle-detection prototype combining a stepper motor, ultrasonic sensor, gyroscope, buzzer, and status indicators.
           </p>
         </div>
@@ -440,22 +471,23 @@
 
     <!-- Certificates Section -->
     <section id="panel-certificates" class="panel">
-      <h2 class="section-title">Certificates &amp; Key Milestones</h2>
+      <h2 id="certs-title" class="section-title">Certificates &amp; Key Milestones</h2>
       <ul class="cert-list">
-        <li class="cert-item">Graduate of Aspire Institute (Aspire Leaders Program)</li>
-        <li class="cert-item">Team Leader of Team FAP — Captain Farid Foundation for Space &amp; Aviation</li>
-        <li class="cert-item">NASA Space Apps Challenge Certificate (Baghdad)</li>
-        <li class="cert-item">NASA ARSET — Satellite Remote Sensing Training Certificate</li>
-        <li class="cert-item">Iraqi Engineers Union — Engineering Certificate</li>
-        <li class="cert-item">Imperial College London — Aviation / Aerospace Certificate</li>
-        <li class="cert-item">Introduction to Drones Certification — Alison (96% Score)</li>
+        <li id="cert1" class="cert-item">Graduate of Aspire Institute (Aspire Leaders Program)</li>
+        <li id="cert2" class="cert-item">Team Leader of Team FAP — Captain Farid Foundation for Space &amp; Aviation</li>
+        <li id="cert3" class="cert-item">NASA Space Apps Challenge Certificate (Baghdad)</li>
+        <li id="cert4" class="cert-item">NASA ARSET — Satellite Remote Sensing Training Certificate</li>
+        <li id="cert5" class="cert-item">Iraqi Engineers Union — Engineering Certificate</li>
+        <li id="cert6" class="cert-item">Imperial College London — Aviation / Aerospace Certificate</li>
+        <li id="cert7" class="cert-item">Introduction to Drones Certification — Alison (96% Score)</li>
       </ul>
     </section>
 
     <!-- Footer with Phone & Social App Icons -->
     <footer class="footer">
       <div class="phone-box">
-        <span>Phone: 07727678222</span>
+        <span id="phone-label">Phone:</span>
+        <span>07727678222</span>
       </div>
 
       <div class="social-apps" aria-label="Social Media Links">
@@ -484,6 +516,114 @@
   </div>
 
   <script>
+    let currentLang = "en";
+
+    const translations = {
+      ar: {
+        dir: "rtl",
+        toggleBtn: "English",
+        badge: "قائد فريق FAP — مؤسسة كابتن فريد للفضاء والطيران",
+        name: "حيدر حسن عواد",
+        subtitle: "هندسة تقنيات الفضاء والطائرات المسيرة",
+        bio: "طالب هندسة في المرحلة الثالثة بالكلية التقنية الهندسية الكهربائية – الجامعة التقنية الوسطى (بغداد، العراق). قائد فريق FAP التابع لمؤسسة كابتن فريد للفضاء والطيران، أعمل على مشاريع الأقمار الصناعية النانوية، محاكاة المدارات، نماذج الطائرات المسيرة والـ CAD، والأنظمة المدمجة.",
+        tabProjects: "المشاريع والتصاميم",
+        tabCertificates: "الشهادات والإنجازات",
+        projectsTitle: "المشاريع والأشكال المصممة",
+        proj1Title: "محاكي الأقمار الصناعية المداري",
+        proj1Desc: "محاكاة مدارية تفاعلية لعرض مسارات الأقمار الصناعية وتغطية المهام ورصد المناطق البيئية والمخاطر.",
+        proj1Link: "فتح محاكي الأقمار الصناعية",
+        proj2Title: "مشروع قمر صناعي وفريق FAP",
+        proj2Desc: "قيادة فريق FAP التابع لمؤسسة كابتن فريد للفضاء والطيران في تصميم منظومة قمر صناعي وتحليل المدارات وتوثيق المشروع.",
+        proj3Title: "نماذج الطائرات المسيرة والـ CAD",
+        proj3Desc: "تصميم ثلاثي الأبعاد للطائرات المسيرة ببرنامج SolidWorks مع تنفيذ نماذج عملية مثل مفهوم الجناح الطائر B-2 ومحطة الفضاء ISS.",
+        proj4Title: "منظومة رادار وحساسات بالأردوينو",
+        proj4Desc: "نموذج أولي لرادار مسح وكشف عوائق يجمع بين محرك خطوي وحساس موجات فوق صوتية وجيروسكوب ومنبه ومؤشرات حالة.",
+        certsTitle: "الشهادات والإنجازات البارزة",
+        cert1: "خريج معهد أسباير (برنامج قادة أسباير)",
+        cert2: "قائد فريق FAP — مؤسسة كابتن فريد للفضاء والطيران",
+        cert3: "شهادة تحدي ناسا لتطبيقات الفضاء (بغداد)",
+        cert4: "شهادة برنامج ناسا ARSET للاستشعار عن بُعد عبر الأقمار الصناعية",
+        cert5: "شهادة من نقابة المهندسين العراقيين",
+        cert6: "شهادة في الطيران / الفضاء من جامعة إمبريال كوليدج لندن",
+        cert7: "شهادة مقدمة في الطائرات المسيرة — منصة Alison (درجة 96%)",
+        phoneLabel: "الهاتف:"
+      },
+      en: {
+        dir: "ltr",
+        toggleBtn: "العربية",
+        badge: "Team Leader — FAP Team (Captain Farid Foundation for Space & Aviation)",
+        name: "Haydar Hassan Awaad",
+        subtitle: "Space Engineering & Unmanned Aerial Vehicles (UAV) Technology",
+        bio: "Undergraduate engineering student (3rd Stage) at the Electrical Engineering Technical College, Middle Technical University (Baghdad, Iraq). Team Leader of Team FAP under Captain Farid Foundation for Space & Aviation, building CubeSat concepts, orbital simulations, UAV CAD models, and embedded hardware prototypes.",
+        tabProjects: "Projects & Designs",
+        tabCertificates: "Certificates & Achievements",
+        projectsTitle: "Projects & Designed Models",
+        proj1Title: "Satellite Orbital Simulator",
+        proj1Desc: "Interactive orbital simulation designed to visualize satellite trajectories and mission coverage for monitoring environmental and hazard zones.",
+        proj1Link: "Open Satellite Simulator",
+        proj2Title: "CubeSat Mission & Team FAP",
+        proj2Desc: "Leading Team FAP under Captain Farid Foundation for Space & Aviation on CubeSat mission architecture, orbital analysis, and project documentation.",
+        proj3Title: "UAV 3D CAD & Aerospace Models",
+        proj3Desc: "3D CAD modeling of unmanned aerial vehicles in SolidWorks alongside custom physical models including a B-2 flying wing concept and a scaled ISS model.",
+        proj4Title: "Arduino Radar & Sensor Prototype",
+        proj4Desc: "Automated scanning radar and obstacle-detection prototype combining a stepper motor, ultrasonic sensor, gyroscope, buzzer, and status indicators.",
+        certsTitle: "Certificates & Key Milestones",
+        cert1: "Graduate of Aspire Institute (Aspire Leaders Program)",
+        cert2: "Team Leader of Team FAP — Captain Farid Foundation for Space & Aviation",
+        cert3: "NASA Space Apps Challenge Certificate (Baghdad)",
+        cert4: "NASA ARSET — Satellite Remote Sensing Training Certificate",
+        cert5: "Iraqi Engineers Union — Engineering Certificate",
+        cert6: "Imperial College London — Aviation / Aerospace Certificate",
+        cert7: "Introduction to Drones Certification — Alison (96% Score)",
+        phoneLabel: "Phone:"
+      }
+    };
+
+    function applyLanguage(lang) {
+      const t = translations[lang];
+      document.documentElement.lang = lang;
+      document.documentElement.dir = t.dir;
+
+      document.getElementById("lang-toggle").textContent = t.toggleBtn;
+      document.getElementById("hero-badge").textContent = t.badge;
+      document.getElementById("hero-name").textContent = t.name;
+      document.getElementById("hero-subtitle").textContent = t.subtitle;
+      document.getElementById("hero-bio").textContent = t.bio;
+
+      document.getElementById("tab-projects-label").textContent = t.tabProjects;
+      document.getElementById("tab-certificates-label").textContent = t.tabCertificates;
+
+      document.getElementById("projects-title").textContent = t.projectsTitle;
+      document.getElementById("proj1-title").textContent = t.proj1Title;
+      document.getElementById("proj1-desc").textContent = t.proj1Desc;
+      document.getElementById("proj1-link").textContent = t.proj1Link;
+
+      document.getElementById("proj2-title").textContent = t.proj2Title;
+      document.getElementById("proj2-desc").textContent = t.proj2Desc;
+
+      document.getElementById("proj3-title").textContent = t.proj3Title;
+      document.getElementById("proj3-desc").textContent = t.proj3Desc;
+
+      document.getElementById("proj4-title").textContent = t.proj4Title;
+      document.getElementById("proj4-desc").textContent = t.proj4Desc;
+
+      document.getElementById("certs-title").textContent = t.certsTitle;
+      document.getElementById("cert1").textContent = t.cert1;
+      document.getElementById("cert2").textContent = t.cert2;
+      document.getElementById("cert3").textContent = t.cert3;
+      document.getElementById("cert4").textContent = t.cert4;
+      document.getElementById("cert5").textContent = t.cert5;
+      document.getElementById("cert6").textContent = t.cert6;
+      document.getElementById("cert7").textContent = t.cert7;
+
+      document.getElementById("phone-label").textContent = t.phoneLabel;
+    }
+
+    function toggleLanguage() {
+      currentLang = currentLang === "en" ? "ar" : "en";
+      applyLanguage(currentLang);
+    }
+
     function switchTab(tabName) {
       const btnProjects = document.getElementById("btn-projects");
       const btnCertificates = document.getElementById("btn-certificates");
@@ -505,4 +645,3 @@
   </script>
 </body>
 </html>
-
